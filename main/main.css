@@ -10,7 +10,7 @@ body, html {
 body {
     width: 100%;
     height: 100%;
-    background: #000;
+    background: url("resources/bg.png");
     cursor: url("./resources/scan.png"), auto;
 }
 
@@ -19,28 +19,43 @@ body.match{
 }
 
 .star {
-    width: 1px;
-    height: 1px;
+    width: 5px;
+    height: 5px;
     border-radius: 50%;
-    background: #fff;
-    box-shadow: 0px 0px 40px 20px #fff;
+    background-color: var(--star-main-color);
+    box-shadow: 0 0 10px 5px var(--star-main-color), 0 0 25px 12px var(--star-secound-color);
     margin:50px;
     position: absolute;
+    opacity: 0.4;
+   /* display: none;*/
 }
 
 #star1{
-  left: 5%;
+    left: 5%;
     top:39%;
+    display: block;
 }
+
 #star2{
-  left: 100px;
-    top:500px;
+    right: 3%;
+    bottom:13%;
 }
+
 #star3{
   left: 250px;
     top:10px;
 }
+
 #star4{
   right: 350px;
     top:800px;
+}
+
+.starBox{
+    position:relative;
+    left: -99px;
+    top: -99px;
+    width: 100px;
+    height: 100px;
+
 }
