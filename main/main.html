@@ -6,8 +6,6 @@
     <link rel="stylesheet" href="main.css">
     <script>
         function blinkCursor(){
-
-            //setInterval(function () {document.querySelector("body").classList.toggle("match")},1000);
             document.querySelector("body").classList.add("match");
             setTimeout(function () {
                 console.log("add");
@@ -43,16 +41,30 @@
 
         }
         window.addEventListener('DOMContentLoaded', function () {
-            blinkCursor();
+            document.querySelectorAll(".starBox").forEach(elem=>elem.addEventListener("mouseover", function(){
+                blinkCursor();
+            }));
         });
     </script>
 
 
 </head>
 <body>
-    <div class="star" id="star1"></div>
-    <div class="star" id="star2"></div>
-    <div class="star" id="star3"></div>
-    <div class="star" id="star4"></div>
+
+<div class="star" style="--star-main-color: red;--star-secound-color:red;" id="star1">
+    <div class="starBox"></div>
+</div>
+<div class="star" style="--star-main-color: white;--star-secound-color:yellow;" id="star2">
+    <div class="starBox"></div>
+</div>
+<div class="star" style="--star-main-color: yellow;--star-secound-color:yellow;" id="star3">
+    <div class="starBox"></div>
+</div>
+<div class="star" style="--star-main-color: pink;--star-secound-color:pink;" id="star4">
+    <div class="starBox"></div>
+</div>
+<div id="dock">
+
+</div>
 </body>
 </html>
