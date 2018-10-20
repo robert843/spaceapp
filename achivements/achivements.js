@@ -49,7 +49,8 @@ class Star {
         let thumbnail = document.createElement('li'); 
         let thumbnailImg = "url('" + this.starImg + "')";
 
-        thumbnail.classList.add('exploredElements');
+        thumbnail.setAttribute('data-star-name', this.starName);
+        thumbnail.classList.add('exploredElement');
         thumbnail.style.backgroundImage = thumbnailImg;
         return thumbnail;
     }
@@ -118,4 +119,22 @@ function LoadStars(StarsArray) {
 
 }
 
+function LoadStarDescription(ClickedStarDesc) {
+    let placeDetails = document.getElementById('placeDetails');
+    placeDetails.innerHTML = ClickedStarDesc;
+}
+
 LoadStars(STARS);
+
+var exploredElements = document.getElementsByClassName('exploredElement');
+
+for (var element of exploredElements) {
+    element.addEventListener('click', function () {
+        LoadStarDescription(
+            STARS.find(
+                x => x.starName === this.dataset.starName
+            ).getStarDescription
+        )
+    })
+}
+

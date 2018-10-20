@@ -59,7 +59,8 @@ body {
     padding: 10px 100px;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 100px repeat(3, 60px);
+    grid-template-rows: 100px repeat(4, 60px);
+    border-radius: 15% 15% 10% 10%;
 }
 
 #exploredElementDetails {
@@ -68,6 +69,7 @@ body {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
     font-size: 20px;
+    text-align: center;
 }
 
 #summaryHeader {
