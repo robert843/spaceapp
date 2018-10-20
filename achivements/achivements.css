@@ -1,0 +1,97 @@
+* {
+    font-family: 'Roboto', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100vw;
+    height: 100vh;
+}
+
+body {
+    padding: 40px 0;
+    background: #333333;
+    color: #ffffff;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;   
+}
+
+#explored {
+    width: 100vw;
+    margin-bottom: 40px;
+}
+
+#exploredElements {
+    width: 100%;
+    height: 150px;
+    overflow-x: scroll;
+    white-space: nowrap;
+}
+
+#explored li {
+    display: inline-block;
+    width: 200px;    
+    height: 100px;
+    background-image: url("http://placehold.it/400x400?text=...");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: 10px 15px;
+}
+
+#details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+#explorationSummary {
+    background: rgba(109, 109, 109, 0.37);
+    padding: 10px 100px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px repeat(3, 60px);
+}
+
+#exploredElementDetails {
+    padding: 10px 100px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    font-size: 20px;
+}
+
+#summaryHeader {
+    display: flex;
+    flex-direction: row;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-bottom: 1px dotted #333333;
+    margin-bottom: 40px;
+}
+
+.summaryHeaderLabel {
+    font-weight: 900;
+}
+
+.summaryElement {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: stretch; 
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    padding: 5px 20px;
+}
+
+.summaryElementLabel {
+    width: 300px;
+    margin-right: 40px;    
+    font-weight: 900;
+}
