@@ -40,6 +40,12 @@ body {
     background-size: cover;
     background-position: center;
     margin: 10px 15px;
+    opacity: 0.85;
+}
+
+#explored li:hover {
+    opacity: 1;
+    cursor: pointer;
 }
 
 #details {
