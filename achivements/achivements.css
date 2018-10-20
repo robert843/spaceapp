@@ -11,15 +11,37 @@ html, body {
 }
 
 body {
+    z-index: 100;
     padding: 40px 0;
-    background: #333333;
+    background-color: #333333;
     color: #ffffff;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto 1fr;   
 }
 
+#nasaBuilding {
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../assets/achivements/nasa-fixed.png');
+}
+
+#background {
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../assets/achivements/osiagniecia-background.png');
+}
+
 #explored {
+    z-index: 100;
     width: 100vw;
     margin-bottom: 40px;
 }
@@ -48,7 +70,13 @@ body {
     cursor: pointer;
 }
 
+.exploredElement {
+    border-radius: 10px;
+    border: 6px solid #fff;
+}
+
 #details {
+    z-index: 9;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
@@ -64,6 +92,7 @@ body {
 }
 
 #exploredElementDetails {
+    z-index: 100;
     padding: 10px 100px;
     display: grid;
     grid-template-columns: 1fr;
