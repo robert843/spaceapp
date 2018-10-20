@@ -1,0 +1,81 @@
+* {
+    font-family: 'Roboto', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100vw;
+    height: 100vh;
+}
+
+body {
+    z-index: 100;
+    padding: 40px 0;
+    background-color: #333333;
+    color: #ffffff;
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: ". upgradesControl"
+}
+
+#background {
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../assets/researchCenter/background-animated.gif');
+}
+
+#upgradesControl {
+    z-index: 100;
+    grid-area: "upgradesControl";
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+}
+
+#clickerUpgrades, #agencyUpgrades {
+    background: #333;
+    border-radius: 5% 5% 0 0;
+    margin: 20px 0;
+    margin-right: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.13fr auto 1fr
+}
+
+#clickerUpgradeHeader, #agencyUpgradeHeader {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+.upgradesList {
+    max-height: 354.867px;
+    width: 748px;
+    display: grid;
+    grid-template: 1fr / repeat(2, 1fr);
+    grid-auto-flow: row dense;
+    text-align: center;
+    overflow-y: auto;
+}
+
+.upgradesList div {
+    padding: 20px 30px;
+}
+
+.upgradesList div::selection {
+    text-decoration: none;
+}
+
+.upgradesList div:hover {
+    background: #444333;
+    cursor: pointer;
+}
