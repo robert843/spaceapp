@@ -59,3 +59,15 @@ body.match{
     height: 100px;
 
 }
+#dock{
+    position: fixed;
+    right:0;
+}
+
+#dock ol{
+    list-style: none;
+}
+#dock li{
+    cursor:pointer;
+
+}

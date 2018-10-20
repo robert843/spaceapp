@@ -5,43 +5,35 @@
     <title>Ekran główny</title>
     <link rel="stylesheet" href="main.css">
     <script>
-        function blinkCursor(){
+        function blinkCursor() {
             document.querySelector("body").classList.add("match");
             setTimeout(function () {
-                console.log("add");
                 document.querySelector("body").classList.remove("match")
+            }, 300);
+            setTimeout(function () {
+                document.querySelector("body").classList.add("match")
             }, 600);
             setTimeout(function () {
-                console.log("remove");
+                document.querySelector("body").classList.remove("match")
+            }, 900);
+            setTimeout(function () {
                 document.querySelector("body").classList.add("match")
             }, 1200);
+
             setTimeout(function () {
-                console.log("add");
                 document.querySelector("body").classList.remove("match")
+            }, 1500);
+            setTimeout(function () {
+                document.querySelector("body").classList.add("match")
             }, 1800);
             setTimeout(function () {
-                console.log("remove");
-
-                document.querySelector("body").classList.add("match")
-            }, 2400);
-
-            setTimeout(function () {
-                console.log("add");
                 document.querySelector("body").classList.remove("match")
-            }, 3000);
-            setTimeout(function () {
-                console.log("remove");
-
-                document.querySelector("body").classList.add("match")
-            }, 3600);
-            setTimeout(function () {
-                console.log("add");
-                document.querySelector("body").classList.remove("match")
-            }, 4200);
+            }, 2100);
 
         }
+
         window.addEventListener('DOMContentLoaded', function () {
-            document.querySelectorAll(".starBox").forEach(elem=>elem.addEventListener("mouseover", function(){
+            document.querySelectorAll(".starBox").forEach(elem => elem.addEventListener("mouseover", function () {
                 blinkCursor();
             }));
         });
@@ -64,7 +56,18 @@
     <div class="starBox"></div>
 </div>
 <div id="dock">
+    <ol>
 
+        <li>
+            <a href="find-galaxy"><img src="resources/nav/nav_placeholder.png"/></a>
+        </li>
+        <li>
+            <a href="research"><img src="resources/nav/nav_placeholder.png"/></a>
+        </li>
+        <li>
+            <a href="achivments"><img src="resources/nav/nav_placeholder.png"/></a>
+        </li>
+    </ol>
 </div>
 </body>
 </html>
