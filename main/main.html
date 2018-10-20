@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ekran główny</title>
+    <link rel="stylesheet" href="main.css">
+    <script>
+        function blinkCursor(){
+
+            //setInterval(function () {document.querySelector("body").classList.toggle("match")},1000);
+            document.querySelector("body").classList.add("match");
+            setTimeout(function () {
+                console.log("add");
+                document.querySelector("body").classList.remove("match")
+            }, 600);
+            setTimeout(function () {
+                console.log("remove");
+                document.querySelector("body").classList.add("match")
+            }, 1200);
+            setTimeout(function () {
+                console.log("add");
+                document.querySelector("body").classList.remove("match")
+            }, 1800);
+            setTimeout(function () {
+                console.log("remove");
+
+                document.querySelector("body").classList.add("match")
+            }, 2400);
+
+            setTimeout(function () {
+                console.log("add");
+                document.querySelector("body").classList.remove("match")
+            }, 3000);
+            setTimeout(function () {
+                console.log("remove");
+
+                document.querySelector("body").classList.add("match")
+            }, 3600);
+            setTimeout(function () {
+                console.log("add");
+                document.querySelector("body").classList.remove("match")
+            }, 4200);
+
+        }
+        window.addEventListener('DOMContentLoaded', function () {
+            blinkCursor();
+        });
+    </script>
+
+
+</head>
+<body>
+    <div class="star" id="star1"></div>
+    <div class="star" id="star2"></div>
+    <div class="star" id="star3"></div>
+    <div class="star" id="star4"></div>
+</body>
+</html>
