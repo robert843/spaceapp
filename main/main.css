@@ -7,15 +7,18 @@ body, html {
     height: 100%;
 }
 
+body.scan {
+    cursor: url("./resources/scan.png"), auto;
+}
+
 body {
     width: 100%;
     height: 100%;
     background: url("resources/bg.png");
-    cursor: url("./resources/scan.png"), auto;
     font-family: 'Roboto', sans-serif;
 }
 
-body.match{
+body.match {
     cursor: url("./resources/scanMatch.png"), auto;
 }
 
@@ -31,65 +34,66 @@ body.match{
     box-shadow: 0 0 10px 5px var(--star-main-color), 0 0 25px 12px var(--star-secound-color);
 }
 
-#star1{
+#star1 {
     left: 5%;
-    top:39%;
+    top: 39%;
     display: block;
 }
 
-#star2{
-    right: 3%;
-    bottom:13%;
+#star2 {
+    right: 10%;
+    bottom: 28%;
 }
 
-#star3{
-  left: 250px;
-    top:10px;
+#star3 {
+    left: 48%;
+    top: 33%;
 }
 
-#star4{
-  right: 350px;
-    top:800px;
+#star4 {
+    right: 73%;
+    top: 55%;
 }
 
-.starBox{
-    position:relative;
+.starBox {
+    position: relative;
     left: -99px;
     top: -99px;
     width: 100px;
     height: 100px;
 
 }
-#dock{
+
+#dock {
     position: fixed;
-    right:0;
+    right: 0;
 }
 
-#dock ol{
+#dock ol {
     list-style: none;
 }
-#dock li{
-    cursor:pointer;
+
+#dock li {
+    cursor: pointer;
 }
 
-#notifications{
-    position:fixed;
+#notifications {
+    position: fixed;
     right: 0;
     bottom: 0;
 
 }
 
-#notifications .notification{
-    width:580px;
+#notifications .notification {
+    width: 580px;
     height: 60px;
     vertical-align: middle;
-    display:table-cell;
+    display: table-cell;
     opacity: 0;
-
 
 }
 
-#notifications .notification.alert{
+#notifications .notification.alert {
     background: #fff;
     border-top: 20px red solid;
     border-bottom: 20px red solid;
@@ -97,7 +101,8 @@ body.match{
 
 }
 
-#quests{
+#quests {
+    display:none;
     position: fixed;
     top: 20px;
     height: 80vh;
@@ -107,24 +112,25 @@ body.match{
     z-index: 99999;
     opacity: 0.8;
     border-radius: 5px;
-    padding:10px;
+    padding: 10px;
 }
 
-#quests h1{
-    border-bottom:1px solid #fff;
-    color:#fff;
+#quests h1 {
+    border-bottom: 1px solid #fff;
+    color: #fff;
 }
 
-#quests ol{
+#quests ol {
     list-style: none;
-    margin:0;
-    padding:0;
+    margin: 0;
+    padding: 0;
 }
-#quests li{
-    margin:5px 0;
+
+#quests li {
+    margin: 5px 0;
     background: #fff;
-    color:#000;
-    padding:20px;
+    color: #000;
+    padding: 20px;
 }
 
 .flip {
@@ -132,7 +138,6 @@ body.match{
     animation-name: flip;
     animation-duration: 2.5s;
 }
-
 
 @keyframes flip {
     0% {

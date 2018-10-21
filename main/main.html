@@ -41,8 +41,13 @@
 
 
         window.addEventListener('DOMContentLoaded', function () {
+            document.querySelector("a[href=find-galaxy]").addEventListener("click",function (event) {
+                document.querySelector("body").classList.toggle("scan");
+                event.preventDefault();
+            });
+
             document.querySelectorAll(".starBox").forEach(elem => elem.addEventListener("mouseover", function () {
-                if(!this.parentElement.classList.contains("active")){
+                if(!this.parentElement.classList.contains("active") && document.querySelector("body").classList.contains("scan")){
                     document.querySelector('.notification').classList.add('flip');
                     this.parentElement.classList.add("active");
                     blinkCursor();
