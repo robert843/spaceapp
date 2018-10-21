@@ -103,12 +103,12 @@ body.match {
 
 }
 
+
 #quests {
     display:none;
     position: fixed;
     top: 20px;
     height: 80vh;
-    background: #333333;
     width: 90%;
     margin-left: 90px;
     z-index: 99999;
@@ -117,9 +117,49 @@ body.match {
     padding: 10px;
 }
 #quests .close{
-    float:right;
-    color:#FFFFFF;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    opacity: 0.8;
+    float:left;
+    color:#000;
     cursor: pointer;
+    font-size: 20px;
+    background: #FFF;
+    border-radius: 100%;
+}
+
+#quiz {
+    display:none;
+    position: fixed;
+    top: 20px;
+    width: 90%;
+    margin-left: 90px;
+    background: #333333;
+    z-index: 99999;
+    opacity: 0.8;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+#quiz .close{
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    opacity: 0.8;
+    float:right;
+    color:#000;
+    cursor: pointer;
+    font-size: 20px;
+    background: #FFF;
+    border-radius: 100%;
+}
+
+#quiz h1 {
+    border-bottom: 1px solid #fff;
+    color: #fff;
+    margin:10px 0 10px 0;
+    padding: 5px;
 }
 
 #quests h1 {
@@ -129,24 +169,52 @@ body.match {
     padding: 5px;
 }
 
-#quests ol {
+#quiz ol {
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
-#quests li {
+#quiz li {
     margin: 5px 0;
     background: #fff;
     color: #000;
     padding: 20px;
     cursor: pointer;
 }
-#quests li.disabled {
+
+#quiz li.disabled {
     background: #DDDDDD;
     cursor: not-allowed;
 }
 
+#startQuiz{
+    cursor: pointer;
+    position: fixed;
+    left: 870px;
+    bottom: 290px;
+    width: 100px;
+    height: 100px;
+}
+
+#quests #info{
+    cursor: pointer;
+    position: fixed;
+    left: 623px;
+    top: 65px;
+    width: 678px;
+    height: 180px;
+
+}
+#q2,#q3,#q4,#q5,#success,#fail{
+    display: none;
+}
+
+#infoContent{
+    overflow-y: auto;
+    width: 678px;
+    height: 150px;
+}
 
 @keyframes flip {
     0% {
