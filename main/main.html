@@ -51,6 +51,9 @@
 
             document.querySelector("#star1").addEventListener("click",function (event) {
                 document.querySelector("#quests").style.display='block';
+                document.querySelector("#q1").style.display='block';
+                document.querySelector("#fail").style.display='none';
+                document.querySelector("#success").style.display='none';
                 document.querySelector("body").classList.remove("scan");
                 event.preventDefault();
             });
