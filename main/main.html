@@ -55,9 +55,61 @@
                 event.preventDefault();
             });
 
+            document.querySelector("#startQuiz").addEventListener("click",function (event) {
+                document.querySelector("#quests").style.display='none';
+                document.querySelector("#quiz").style.display='block';
+                event.preventDefault();
+            });
+
+            document.querySelector("#q1 .correct").addEventListener("click",function (event) {
+                document.querySelector("#q1").style.display='none';
+                document.querySelector("#q2").style.display='block';
+                event.preventDefault();
+            });
+
+
+            document.querySelector("#q2 .correct").addEventListener("click",function (event) {
+                document.querySelector("#q2").style.display='none';
+                document.querySelector("#q3").style.display='block';
+                event.preventDefault();
+            });
+
+
+            document.querySelector("#q3 .correct").addEventListener("click",function (event) {
+                document.querySelector("#q3").style.display='none';
+                document.querySelector("#q4").style.display='block';
+                event.preventDefault();
+            });
+
+
+            document.querySelector("#q4 .correct").addEventListener("click",function (event) {
+                document.querySelector("#q4").style.display='none';
+                document.querySelector("#q5").style.display='block';
+                event.preventDefault();
+            });
+
+            document.querySelector("#q5 .correct").addEventListener("click",function (event) {
+                document.querySelector("#q5").style.display='none';
+                document.querySelector("#success").style.display='block';
+                event.preventDefault();
+            });
+
             document.querySelector("#quests .close").addEventListener("click",function (event) {
                 document.querySelector("#quests").style.display='none';
                 document.querySelector("body").classList.add("scan");
+                event.preventDefault();
+            });
+
+            document.querySelector("#quiz .close").addEventListener("click",function (event) {
+                document.querySelector("#quiz").style.display='none';
+                document.querySelector("body").classList.add("scan");
+                event.preventDefault();
+            });
+
+            document.querySelector("#quiz li").addEventListener("click",function (event) {
+                   if(!this.classList.contains("correct")){
+                       document.querySelector("#fa").style.display='none';
+                   }
                 event.preventDefault();
             });
 
@@ -79,14 +131,85 @@
 <body>
 <div id="quests">
     <div class="close">X</div>
-    <h1>Aktywności do wykonania</h1>
-    <ol>
-        <li>Quiz z wiedzy ogólnej</li>
-        <li class="disabled">Quiz z fizycznej</li>
-        <li class="disabled">Quiz matematyczny</li>
-        <li class="disabled">Minigierka</li>
-        <li class="disabled">Puzzle</li>
-    </ol>
+    <img src="../assets/main/klik-gwiazda.png" style="height: 100%"/>
+    <div id="startQuiz"></div>
+    <div id="info" style="padding:5px;">
+        <h2>Nieznana gwaizda nr 15544</h2>
+        <div id="infoContent">
+            This image shows a massive galaxy cluster embedded in the middle of a field of nearly 8,000 galaxies scattered across space and time. This "galaxies galore" snapshot is from a new Hubble Space Telescope survey to boldly expand its view by significantly enlarging the area covered around huge galaxy clusters previously photographed by Hubble.<br>
+            The program, called Beyond Ultra-deep Frontier Fields And Legacy Observations (BUFFALO), is built around the six massive galaxy clusters that Hubble first observed under its Frontier Fields program.<br>
+            In this view the huge cluster Abell 370, located about 4 billion light-years away, lies in the center of this image. It contains several hundred galaxies. The mosaic of fields flanking the cluster contains myriad background galaxies flung across space and time.<br>
+            Massive galaxy clusters like Abell 370 are mainly composed of dark matter. Their large masses distort space, turning them into gravitational lenses that magnify and distort the light coming from distant background galaxies. The Frontier Fields program, a previous joint effort from NASA's Great Observatories to study several clusters, allowed for the discovery of background galaxies and supernovas that are so distant and faint that they could not have been photographed by Hubble without the aid of this additional gravitational amplification.<br>
+            The regions that Hubble will map for BUFFALO were previously observed by NASA’s Spitzer Space Telescope for the Frontier Fields program, in which Spitzer and Hubble worked together to detect and study some of the universe’s earliest galaxies. Spitzer imaged a much larger area of the sky than Hubble but could not measure the distances to the galaxies it observed in those regions.<br>
+            With BUFFALO, Hubble is now coming back to the full area of sky covered by Spitzer, to measure the distances to thousands of galaxies. This is important because the six fields observed by Hubble are relatively small and might not fully represent the number of early galaxies in the wider universe. Abell 370 is the first cluster to be observed.<br>
+            An important motive for the BUFFALO program is the possibility that there may be significantly fewer than predicted extremely distant galaxies found in the Frontier Fields survey. This led astronomers to propose expanding the search area around each Frontier Fields cluster to seek out more distant galaxies, and therefore more accurately determine the numbers of such galaxies.<br>
+            Although the Frontier Fields have already discovered some of the earliest galaxies, these fields are comparatively small and so may not represent the universe at large. This dilemma for cosmologists is called cosmic variance. By expanding the survey area, such uncertainties in the structure of the universe can be reduced.<br>
+            This means conducting a concise census of the first galaxies in as wide of an area as feasible. The goal is to improve the probability of identifying some of the rare regions of space with a concentration of early galaxies and the far more common regions that had not yet been able to form galaxies so quickly.<br>
+            Because Frontier Fields observations have already established what the first galaxies look like, the wider area of BUFFALO will enable searches for these galaxies several times more efficiently than the original Frontier Fields. It will also take advantage of observations from other space telescopes, including ultra-deep Spitzer Space Telescope observations that already exist around these clusters.<br>
+            The BUFFALO program is designed to identify galaxies in their earliest stages of formation, less than 800 million years after the big bang. These galaxies should help shed light on the processes by which galaxies first assembled. One of BUFFALO’s key goals is to determine how rapidly galaxies formed in this early epoch. This will help astronomers design strategies for using NASA's upcoming James Webb Space Telescope to probe the distant universe with its infrared vision.<br>
+            Astronomers anticipate that the survey will yield new insights into when the most massive and luminous galaxies formed and how they are linked to dark matter, and how the dynamics of the clusters influence the galaxies in and around them. The survey also will provide a chance to pinpoint images of distant galaxies and supernovas.<br>
+            The BUFFALO program is jointly led by Charles Steinhardt (Niels Bohr Institute, University of Copenhagen) and Mathilde Jauzac (Durham University, UK), and involves an international team of nearly 100 astronomers from 13 countries, including experts in theory, in computer simulations, and in observations of early galactic evolution, gravitational lensing, and supernovas. Approximately 160 hours of Hubble observing time is scheduled for the BUFFALO project.<br>
+            The Hubble Space Telescope is a project of international cooperation between NASA and ESA (European Space Agency). NASA's Goddard Space Flight Center in Greenbelt, Maryland, manages the telescope. The Space Telescope Science Institute (STScI) in Baltimore, Maryland, conducts Hubble science operations. STScI is operated for NASA by the Association of Universities for Research in Astronomy, in Washington, D.C.
+        </div>
+    </div>
+</div>
+
+<div id="quiz">
+    <div class="close">X</div>
+    <div id="q1">
+        <h1>1. HST wyniesiony na orbite w:</h1>
+        <ol>
+            <li class="correct">A. 1990-04-24</li>
+            <li>B. 1990-04-25</li>
+            <li>C. 1990-05-24</li>
+            <li>D. 1990-05-25</li>
+        </ol>
+    </div>
+    <div id="q2">
+        <h1>2.Jak się nazywał prom i misja, która wyniosła HST:</h1>
+        <ol>
+            <li>A. Discovery</li>
+            <li>B. STS-31,discovery</li>
+            <li>C. STS-31</li>
+            <li class="correct">D. discovery,STS-31</li>
+        </ol>
+    </div>
+    <div id="q3">
+        <h1>3.Czy HST jest dziełem tylko NASA:</h1>
+        <ol>
+            <li>A. tak</li>
+            <li class="correct">B. nie, tylko ESA</li>
+            <li>C. nie, plus ESA</li>
+            <li>D. nie, plus ASA</li>
+        </ol>
+    </div>
+    <div id="q4">
+        <h1>4.Czy HST był od samego początku w pełni sprawny:</h1>
+        <ol>
+            <li>TAK</li>
+            <li class="correct">NIE</li>
+        </ol>
+    </div>
+    <div id="q5">
+        <h1>5.Czy projekt HST został sfinansowany za życia Hubble'a::</h1>
+        <ol>
+            <li>A. 21.11.1889r.</li>
+            <li class="correct">B. 20.11.1889r.</li>
+            <li>C. 20.11.1890r</li>
+            <li>D. 20.11.1899r.</li>
+        </ol>
+    </div>
+    <div id="success" style="text-align:center;color:#fff">
+       Gratulacje!<br/>
+        <img src="../assets/main/quiz-trophy.png" style="height: 150px;"/><br/>
+        Do twojego konta dodano 100 000$
+    </div>
+    <div id="fail" style="text-align:center;color:#fff">
+        Zła odpowiedź spróbuj ponownie!<br/>
+        <span style="font-size:50px">(⌣́_⌣̀)</span>
+        <br/>
+
+    </div>
 </div>
 <div id="notifications">
     <div class="notification alert">Uwaga! Znaleziono nowy obiekt!</div>
