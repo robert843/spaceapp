@@ -106,12 +106,13 @@
                 event.preventDefault();
             });
 
-            document.querySelector("#quiz li").addEventListener("click",function (event) {
-                   if(!this.classList.contains("correct")){
-                       document.querySelector("#fa").style.display='none';
-                   }
+            document.querySelectorAll("#quiz li").forEach(elem=>elem.addEventListener("click",function (event) {
+                if(!this.classList.contains("correct")){
+                    document.querySelector("#fail").style.display='block';
+                    this.parentElement.parentElement.style.display = 'none';
+                }
                 event.preventDefault();
-            });
+            }));
 
             document.querySelectorAll(".starBox").forEach(elem => elem.addEventListener("mouseover", function () {
                 if(!this.parentElement.classList.contains("active") && document.querySelector("body").classList.contains("scan")){
