@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Ekran główny</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,900" rel="stylesheet">
+
     <link rel="stylesheet" href="main.css">
     <script>
         function blinkCursor() {
@@ -29,12 +31,22 @@
             setTimeout(function () {
                 document.querySelector("body").classList.remove("match")
             }, 2100);
+            document.querySelector('.notification').addEventListener("animationend", function () {
+                document.querySelector('.notification').classList.remove('flip');
+
+            });
 
         }
 
+
+
         window.addEventListener('DOMContentLoaded', function () {
             document.querySelectorAll(".starBox").forEach(elem => elem.addEventListener("mouseover", function () {
-                blinkCursor();
+                if(!this.parentElement.classList.contains("active")){
+                    document.querySelector('.notification').classList.add('flip');
+                    this.parentElement.classList.add("active");
+                    blinkCursor();
+                }
             }));
         });
     </script>
@@ -42,7 +54,19 @@
 
 </head>
 <body>
-
+<div id="quests">
+    <h1>Aktywności do wykonania</h1>
+    <ol>
+        <li>Quiz z ogólnej</li>
+        <li>Quiz z fizycznej</li>
+        <li>Quiz matematyczny</li>
+        <li>Minigierka</li>
+        <li>Puzzle</li>
+    </ol>
+</div>
+<div id="notifications">
+    <div class="notification alert">Uwaga! Znaleziono nowy obiekt!</div>
+</div>
 <div class="star" style="--star-main-color: red;--star-secound-color:red;" id="star1">
     <div class="starBox"></div>
 </div>
