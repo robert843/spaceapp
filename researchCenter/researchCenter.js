@@ -31,34 +31,34 @@ class Option {
 }
 
  UPGRADES.TELESCOPE.push(
-        new Option('Telescope', 'Mouth Module', { cost: parseFloat(4000).toString().toFixed(2) })
+        new Option('Telescope', 'Mouth Module', { cost: parseFloat((4000).toString()).toFixed(2) })
     )
  UPGRADES.TELESCOPE.push(
-        new Option('Telescope', 'Solar Array', { cost: parseFloat(10000).toString().toFixed(2) })
+        new Option('Telescope', 'Solar Array', { cost: parseFloat((10000).toString()).toFixed(2) })
     )
  UPGRADES.TELESCOPE.push(
-        new Option('Telescope', 'Optical Telescope', { cost: parseFloat(20000).toString().toFixed(2) })
+        new Option('Telescope', 'Optical Telescope', { cost: parseFloat((20000).toString()).toFixed(2) })
     )
  UPGRADES.TELESCOPE.push(
-        new Option('Telescope', 'Radial Science Instrument Module', { cost: parseFloat(55000).toString().toFixed(2) })
+        new Option('Telescope', 'Radial Science Instrument Module', { cost: parseFloat((55000).toString()).toFixed(2) })
     )
  UPGRADES.TELESCOPE.push(
-        new Option('Telescope', 'Crystal Glass', { cost: parseFloat(100000).toString().toFixed(2) })
+        new Option('Telescope', 'Crystal Glass', { cost: parseFloat((100000).toString()).toFixed(2) })
     )
  UPGRADES.TELESCOPE.push(
-        new Option('Telescope', 'Laser Pointer', { cost: parseFloat(120000).toString().toFixed(2) })
+        new Option('Telescope', 'Laser Pointer', { cost: parseFloat((120000).toString()).toFixed(2) })
     )
  UPGRADES.TELESCOPE.push(
-        new Option('Telescope', 'Automatic Pointer Module', { cost: parseFloat((180000 * i).toString()).toFixed(2) })
+        new Option('Telescope', 'Automatic Pointer Module', { cost: parseFloat((180000).toString()).toFixed(2) })
     )
  UPGRADES.TELESCOPE.push(
-        new Option('Telescope', 'Extra Magnifying Glass', { cost: parseFloat((200000 * i).toString()).toFixed(2) })
+        new Option('Telescope', 'Extra Magnifying Glass', { cost: parseFloat((200000).toString()).toFixed(2) })
     )
  UPGRADES.TELESCOPE.push(
-        new Option('Telescope', 'Nanoplastic Glass', { cost: parseFloat((300000 * i).toString()).toFixed(2) })
+        new Option('Telescope', 'Nanoplastic Glass', { cost: parseFloat((300000).toString()).toFixed(2) })
     )
  UPGRADES.TELESCOPE.push(
-        new Option('Telescope', 'Secret Module', { cost: parseFloat((1000000 * i).toString()).toFixed(2) })
+        new Option('Telescope', 'Secret Module', { cost: parseFloat((1000000).toString()).toFixed(2) })
     )
 
 
