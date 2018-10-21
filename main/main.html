@@ -6,6 +6,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,900" rel="stylesheet">
 
     <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="../assets/nav/nav.css">
     <script>
         function blinkCursor(callback) {
             document.querySelector("body").classList.add("match");
@@ -37,8 +38,14 @@
         }
 
         window.addEventListener('DOMContentLoaded', function () {
-            document.querySelector("a[href=find-galaxy]").addEventListener("click",function (event) {
+            document.querySelector(".find-galaxy").addEventListener("click",function (event) {
+                document.querySelector(".radial").classList.remove("open");
                 document.querySelector("body").classList.toggle("scan");
+                event.preventDefault();
+            });
+
+            document.querySelector(".fab").addEventListener("click",function (event) {
+                document.querySelector(".radial").classList.toggle("open");
                 event.preventDefault();
             });
 
@@ -58,9 +65,9 @@
                 if(!this.parentElement.classList.contains("active") && document.querySelector("body").classList.contains("scan")){
                     document.querySelector('.notification').classList.add('flip');
                     this.parentElement.classList.add("active");
-                    let star=this.parentElement;
+                    let star = this.parentElement;
                     blinkCursor(function () {
-                        star.classList.add('canEnter')
+                        star.classList.add('canEnter');
                     });
                 }
             }));
@@ -96,18 +103,15 @@
 <div class="star" style="--star-main-color: pink;--star-secound-color:pink;" id="star4">
     <div class="starBox"></div>
 </div>
-<div id="dock">
-    <ol>
-        <li>
-            <a href="find-galaxy"><img src="resources/nav/nav_placeholder.png"/></a>
-        </li>
-        <li>
-            <a href="research"><img src="resources/nav/nav_placeholder.png"/></a>
-        </li>
-        <li>
-            <a href="achivments"><img src="resources/nav/nav_placeholder.png"/></a>
-        </li>
-    </ol>
+
+
+<div class="radial">
+    <button class="fa fa-paper-plane fa-3x find-galaxy" id="fa-1"><img src="../assets/nav/searchingicon.png" style="width:50px"/></button>
+    <a class="fa fa-home fa-3x" id="fa-2" href="/spaceapp/researchCenter/researchCenter.html"><img src="../assets/nav/improvementicon.png" style="width:50px"/></a>
+    <a class="fa fa-search fa-3x" id="fa-3" href="/spaceapp/achivements/achivements.html"><img src="../assets/nav/achievementicon.png" style="width:50px"/></a>
+    <button class="fab">
+        <div class="fa fa-plus fa-3x" id="plus">+</div>
+    </button>
 </div>
 </body>
 </html>

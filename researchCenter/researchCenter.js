@@ -84,3 +84,7 @@ function showClickPrompt(event) {
         }, 1000);
     }, 500);
 }
+document.querySelector(".fab").addEventListener("click",function (event) {
+    document.querySelector(".radial").classList.toggle("open");
+    event.preventDefault();
+});

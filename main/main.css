@@ -8,18 +8,18 @@ body, html {
 }
 
 body.scan {
-    cursor: url("./resources/scan.png"), auto;
+    cursor: url("../assets/main/scan.png"), auto;
 }
 
 body {
     width: 100%;
     height: 100%;
-    background: url("resources/bg.png");
+    background: url("../assets/main/bg.png");
     font-family: 'Roboto', sans-serif;
 }
 
 body.match {
-    cursor: url("./resources/scanMatch.png"), auto;
+    cursor: url("../assets/main/scanMatch.png"), auto;
 }
 
 .star {
@@ -34,7 +34,7 @@ body.match {
     box-shadow: 0 0 10px 5px var(--star-main-color), 0 0 25px 12px var(--star-secound-color);
 }
 .star.canEnter{
-    cursor: url('resources/enter.png'),auto !important;
+    cursor: url('../assets/main/enter.png'),auto !important;
 }
 #star1 {
     left: 5%;
@@ -146,11 +146,7 @@ body.match {
     background: #DDDDDD;
     cursor: not-allowed;
 }
-.flip {
-    backface-visibility: visible !important;
-    animation-name: flip;
-    animation-duration: 2.5s;
-}
+
 
 @keyframes flip {
     0% {

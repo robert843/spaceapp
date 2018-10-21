@@ -5,6 +5,8 @@
     <title>Podsumowanie</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,900" rel="stylesheet">
     <link rel="stylesheet" href="./achivements.css">
+    <link rel="stylesheet" href="../assets/nav/nav.css">
+
 </head>
 <body>
     <div id="background"></div>
@@ -23,9 +25,9 @@
                 <div class="summaryElementLabel">Odwiedzone miejsca:</div>
                 <div class="summaryElementValue" id="placesExplored">2</div>
             </div>
-            <div class="summaryElement" id="exploringCounter">
+            <div class="summaryElement" id="cleanCounter">
                 <div class="summaryElementLabel">Oczyszczone miejsca:</div>
-                <div class="summaryElementValue" id="placesExplored">0</div>
+                <div class="summaryElementValue" id="cleanExplored">0</div>
             </div>
             <div class="summaryElement" id="exploringProgress">
                 <div class="summaryElementLabel">Procent postępu:</div>
@@ -41,6 +43,14 @@
                 Wybierz odwiedzone miejsce by poznać szczegóły.
             </div>
         </section>
+    </div>
+    <div class="radial" style="z-index:200">
+        <a class="fa fa-paper-plane fa-3x" id="fa-1" href="/spaceapp/main/main.html"><img src="../assets/nav/searchingicon.png" style="width:50px"/></a>
+        <a class="fa fa-home fa-3x" id="fa-2" href="/spaceapp/researchCenter/researchCenter.html"><img src="../assets/nav/improvementicon.png" style="width:50px"/></a>
+        <a class="fa fa-search fa-3x" id="fa-3" href="/spaceapp/achivements/achivements.html"><img src="../assets/nav/achievementicon.png" style="width:50px"/></a>
+        <button class="fab">
+            <div class="fa fa-plus fa-3x" id="plus">+</div>
+        </button>
     </div>
     <script src="./achivements.js"></script>
 </body>

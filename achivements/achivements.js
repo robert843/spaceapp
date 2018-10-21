@@ -171,3 +171,7 @@ for (var element of exploredElements) {
     })
 }
 
+document.querySelector(".fab").addEventListener("click",function (event) {
+    document.querySelector(".radial").classList.toggle("open");
+    event.preventDefault();
+});
