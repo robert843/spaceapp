@@ -40,6 +40,34 @@ body {
     cursor: pointer;
 }
 
+.visible {
+    z-index: 100;
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.8s linear;
+}
+
+.hidden {
+    z-index: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s 0.8s, opacity 0.8s linear;
+}
+
+#clickPrompt {
+    position: absolute;
+    top: 0;
+    left: 0;
+    letter-spacing: 3px;
+    font-size: 22px;
+    font-weight: 900;
+}
+
+#clickPrompt::selection {
+    text-decoration: none;
+    cursor: pointer;
+}
+
 #upgradesControl {
     z-index: 100;
     grid-area: "upgradesControl";
@@ -72,19 +100,37 @@ body {
     display: grid;
     grid-template: 1fr / repeat(2, 1fr);
     grid-auto-flow: row dense;
-    text-align: center;
+    text-align: left;
     overflow-y: auto;
 }
 
 .upgradesList div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
     padding: 20px 30px;
+    border-style: solid;
+    border-color: #333333;
+    border-width: 0 1px 1px 0;
 }
 
 .upgradesList div::selection {
     text-decoration: none;
 }
 
-.upgradesList div:hover {
-    background: #444333;
+.upgradesList .buyBtn {
+    border: none;
+    padding: 10px 20px;
+    margin-left: 25px;
+    border-radius: 30px;
+    letter-spacing: 2px;
+    background: #548aa0;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+.upgradesList .buyBtn:hover {
     cursor: pointer;
+    background: #5f99b1;
 }

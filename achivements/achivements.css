@@ -76,7 +76,7 @@ body {
 }
 
 #details {
-    z-index: 9;
+    z-index: 10;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
@@ -99,6 +99,14 @@ body {
     grid-template-rows: 1fr;
     font-size: 20px;
     text-align: center;
+    max-height: 700px;
+    overflow-y: auto;
+}
+
+.achivementsImg {
+    width: 500px;
+    padding: 10px 20px;
+    float: left;
 }
 
 #summaryHeader {
