@@ -1,5 +1,5 @@
 var UPGRADES = {
-    CLICKER: new Array(),
+    TELESCOPE: new Array(),
     AGENCY: new Array()
 }
 
@@ -22,12 +22,12 @@ class Option {
 }
 
 for (var i = 0; i < 100; i++) {
-    UPGRADES.CLICKER.push(
-        new Option('Clicker', 'C_Option' + i, { cost: 100 * i })
+    UPGRADES.TELESCOPE.push(
+        new Option('Telescope', 'C_Option' + i, { cost: 100 * i })
     )
 
     UPGRADES.AGENCY.push(
-        new Option('Clicker', 'C_Option' + i, { cost: 1000 / i })
+        new Option('Agency', 'C_Option' + i, { cost: 1000 / i })
     )
 }
 
@@ -38,8 +38,8 @@ function LoadOptions(options, optionsBox) {
 }
 
 LoadOptions(
-    UPGRADES.CLICKER, 
-    document.querySelector('#clickerUpgradeOptions .upgradesList')
+    UPGRADES.TELESCOPE, 
+    document.querySelector('#telescopeUpgradeOptions .upgradesList')
 );
 
 LoadOptions(
