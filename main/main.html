@@ -7,7 +7,7 @@
 
     <link rel="stylesheet" href="main.css">
     <script>
-        function blinkCursor() {
+        function blinkCursor(callback) {
             document.querySelector("body").classList.add("match");
             setTimeout(function () {
                 document.querySelector("body").classList.remove("match")
@@ -21,7 +21,6 @@
             setTimeout(function () {
                 document.querySelector("body").classList.add("match")
             }, 1200);
-
             setTimeout(function () {
                 document.querySelector("body").classList.remove("match")
             }, 1500);
@@ -30,15 +29,12 @@
             }, 1800);
             setTimeout(function () {
                 document.querySelector("body").classList.remove("match")
+                callback();
             }, 2100);
             document.querySelector('.notification').addEventListener("animationend", function () {
                 document.querySelector('.notification').classList.remove('flip');
-
             });
-
         }
-
-
 
         window.addEventListener('DOMContentLoaded', function () {
             document.querySelector("a[href=find-galaxy]").addEventListener("click",function (event) {
@@ -46,11 +42,26 @@
                 event.preventDefault();
             });
 
+            document.querySelector("#star1").addEventListener("click",function (event) {
+                document.querySelector("#quests").style.display='block';
+                document.querySelector("body").classList.remove("scan");
+                event.preventDefault();
+            });
+
+            document.querySelector("#quests .close").addEventListener("click",function (event) {
+                document.querySelector("#quests").style.display='none';
+                document.querySelector("body").classList.add("scan");
+                event.preventDefault();
+            });
+
             document.querySelectorAll(".starBox").forEach(elem => elem.addEventListener("mouseover", function () {
                 if(!this.parentElement.classList.contains("active") && document.querySelector("body").classList.contains("scan")){
                     document.querySelector('.notification').classList.add('flip');
                     this.parentElement.classList.add("active");
-                    blinkCursor();
+                    let star=this.parentElement;
+                    blinkCursor(function () {
+                        star.classList.add('canEnter')
+                    });
                 }
             }));
         });
@@ -60,13 +71,14 @@
 </head>
 <body>
 <div id="quests">
+    <div class="close">X</div>
     <h1>Aktywności do wykonania</h1>
     <ol>
-        <li>Quiz z ogólnej</li>
-        <li>Quiz z fizycznej</li>
-        <li>Quiz matematyczny</li>
-        <li>Minigierka</li>
-        <li>Puzzle</li>
+        <li>Quiz z wiedzy ogólnej</li>
+        <li class="disabled">Quiz z fizycznej</li>
+        <li class="disabled">Quiz matematyczny</li>
+        <li class="disabled">Minigierka</li>
+        <li class="disabled">Puzzle</li>
     </ol>
 </div>
 <div id="notifications">
@@ -86,7 +98,6 @@
 </div>
 <div id="dock">
     <ol>
-
         <li>
             <a href="find-galaxy"><img src="resources/nav/nav_placeholder.png"/></a>
         </li>

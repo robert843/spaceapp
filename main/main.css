@@ -33,7 +33,9 @@ body.match {
     background-color: var(--star-main-color);
     box-shadow: 0 0 10px 5px var(--star-main-color), 0 0 25px 12px var(--star-secound-color);
 }
-
+.star.canEnter{
+    cursor: url('resources/enter.png'),auto !important;
+}
 #star1 {
     left: 5%;
     top: 39%;
@@ -114,10 +116,17 @@ body.match {
     border-radius: 5px;
     padding: 10px;
 }
+#quests .close{
+    float:right;
+    color:#FFFFFF;
+    cursor: pointer;
+}
 
 #quests h1 {
     border-bottom: 1px solid #fff;
     color: #fff;
+    margin:10px 0 10px 0;
+    padding: 5px;
 }
 
 #quests ol {
@@ -131,8 +140,12 @@ body.match {
     background: #fff;
     color: #000;
     padding: 20px;
+    cursor: pointer;
 }
-
+#quests li.disabled {
+    background: #DDDDDD;
+    cursor: not-allowed;
+}
 .flip {
     backface-visibility: visible !important;
     animation-name: flip;
