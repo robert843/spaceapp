@@ -94,6 +94,18 @@ body {
     justify-content: center;
 }
 
+#founds{
+position: absolute;
+top: 190px;
+left: 330px;
+transform: rotate(-15deg);
+z-index: 100;
+color:black;
+font-size:18;
+font-weight:500;
+letter-spacing:1.5px;
+}
+
 .upgradesList {
     max-height: 354.867px;
     width: 748px;

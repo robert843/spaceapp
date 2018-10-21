@@ -3,6 +3,8 @@ var UPGRADES = {
     AGENCY: new Array()
 }
 
+var FOUNDS = 0;
+
 class Option {
     constructor(optionCategory, optionName, optionSettings) {
         this.optionCategory = optionCategory;
@@ -55,6 +57,10 @@ LoadOptions(
 );
 
 function showClickPrompt(event) {
+
+    FOUNDS += 1000;
+    document.getElementById("founds").innerHTML = '$' + FOUNDS;
+
     let coords = { x: event.clientX, y: event.clientY };
     let clickPrompt = document.getElementById('clickPrompt');
 
