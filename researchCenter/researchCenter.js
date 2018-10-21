@@ -55,10 +55,10 @@ class Option {
         new Option('Telescope', 'Extra Magnifying Glass', { cost: parseFloat((200000 * i).toString()).toFixed(2) })
     )
  UPGRADES.TELESCOPE.push(
-        new Option('Telescope', 'Nanoplastic Glass' + i, { cost: parseFloat((300000 * i).toString()).toFixed(2) })
+        new Option('Telescope', 'Nanoplastic Glass', { cost: parseFloat((300000 * i).toString()).toFixed(2) })
     )
  UPGRADES.TELESCOPE.push(
-        new Option('Telescope', 'Secret Module' + i, { cost: parseFloat((1000000 * i).toString()).toFixed(2) })
+        new Option('Telescope', 'Secret Module', { cost: parseFloat((1000000 * i).toString()).toFixed(2) })
     )
 
 
